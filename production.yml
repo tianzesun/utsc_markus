@@ -1,0 +1,42 @@
+rails:
+  cache_classes: true
+  eager_load: true
+  consider_all_requests_local: false
+  log_level: info
+  force_ssl: true
+  active_support:
+    deprecation: silence
+  action_controller:
+    perform_caching: true
+  session_store:
+    args:
+      secret: CHANGE_THIS_SECRET
+      secure: true
+  action_mailer:
+    delivery_method: smtp
+    smtp_settings: {}
+    perform_deliveries: false
+
+i18n:
+  available_locales:
+    - en
+  default_locale: en
+
+validate_user_not_allowed_message: 'That is your correct Utorid and password, but you have not been added to MarkUs. Please contact your instructor'
+incorrect_login_message: 'Login incorrect. Check your Utorid at https://www.utorid.utoronto.ca/cgi-bin/utorid/verify.pl'
+repository:
+  storage: <%= "#{::Rails.root.to_s}/data/prod" %>/repos
+
+logging:
+  log_file: log/info_production.log
+  error_file: log/error_production.log
+
+autotest:
+  client_dir: <%= "#{::Rails.root.to_s}/data/prod" %>/autotest
+  max_batch_size: 500
+
+scanned_exams:
+  path: <%= "#{::Rails.root.to_s}/data/prod" %>/exam_templates
+
+starter_file:
+  storage: <%= "#{::Rails.root.to_s}/data/prod" %>/starter_files
