@@ -1,0 +1,13 @@
+To create a course:
+
+1. update lib/tasks/courses.rake
+
+namespace :db do
+  desc 'Create courses'
+  task courses: :environment do
+    Course.create!(name: 'csc108', is_hidden: false, display_name: 'csc108 Fall 2021')
+  end
+end
+
+2. run the following command
+RAILS_ENV=production bundle exec rails db:courses
