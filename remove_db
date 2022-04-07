@@ -1,1 +1,6 @@
-Markus-2.0.10$ rails db:drop
+Markus-2.0.10$rails db:drop
+
+Markus-2.0.10$rails db:reset
+Dropped database 'markus_database'
+Created database 'markus_database'
+
