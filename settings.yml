@@ -48,6 +48,7 @@ repository:
 
 max_file_size: 5000000
 
+session_timeout: 1800
 student_session_timeout: 1800
 ta_session_timeout: 1800
 admin_session_timeout: 1800
