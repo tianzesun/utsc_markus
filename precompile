@@ -1,0 +1,2 @@
+RAILS_ENV=production ./bin/bundle exec rails i18n:js:export
+RAILS_ENV=production ./bin/bundle exec rails assets:precompile
